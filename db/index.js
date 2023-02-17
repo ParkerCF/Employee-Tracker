@@ -9,7 +9,7 @@ const db = mysql.createConnection(
       password: 'password',
       database: 'employee_db'
     },
-    console.log(`Connected to the database.`)
+    console.log(`Successfully connected to employee_db`)
   );
 
 async function init() {
@@ -82,8 +82,6 @@ async function getEmployeeResults(query) {
     return resultArray;
 }
 
-//Following functions return the id of the result entered into inquirer
-
 async function getDepartmentID(data) {
     let mapArray = [];
     let depID;
@@ -129,8 +127,6 @@ async function getManagerID(data) {
     return managerID;    
 }
 
-//This is a helper function to help with returning promises in order
-
 async function setResults(query) {
     let array;
     if (query == "manager") {
@@ -144,8 +140,6 @@ async function setResults(query) {
     }
     return array;
 }
-
-//functions that allow the user to view the current version of the database
 
 async function viewDepartments() {
     db.query('SELECT * FROM departments;', await function (err, results) {
@@ -168,8 +162,6 @@ async function viewEmployees() {
     init();
 }
 
-//functions that add to the database
-
 async function addDepartment() {
     await inq.prompt([
         {
@@ -181,7 +173,7 @@ async function addDepartment() {
         db.query(`INSERT INTO departments(\`name\`) VALUES("${data.department}");`, function (err, results) {
             if (err) throw err;
             else {
-                console.log("Department Successfully Added!");
+                console.log("Department Added!");
                 init();
             }
         });  
