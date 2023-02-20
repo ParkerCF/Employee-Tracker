@@ -22,7 +22,7 @@ async function init() {
    }
  ])
  .then(async (data) => {
-    await cycleChoices(data.process);
+     await cycleChoices(data.process);
  })
 }
 

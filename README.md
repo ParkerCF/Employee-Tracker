@@ -10,12 +10,12 @@ The user will run "node index.js". The user will then be presented with the opti
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./screenshot/employeedbpic.png)
 
 
 ## Demo
+https://drive.google.com/file/d/1U06QjU0NW51f59Qui2R7JKHpgnwKhnK7/view
 
-Insert gif or link to demo
 
 
 ## Features
